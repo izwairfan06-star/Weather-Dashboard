@@ -1,0 +1,125 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+body{
+   background-image: url("weather.jpeg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.weather_input{
+   margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: larger;
+}
+.city{
+  width:300px;
+    max-width:90vw;
+    height:50px;
+    border-radius:20px;
+    font-size:18px;
+    text-align:center;
+}
+.btn{
+    height: 50px;
+  width: 100px;
+  border-radius: 20px;
+  font-size: large;
+  font-weight: bold;
+  background-color: #5E6C54;                 /* Dune grass green */
+  border: 1px solid rgba(255, 255, 255, 0.15);/* Muted top edge highlight */
+  color: #FFFFFF;
+}
+.btn:hover{
+    background-color: rgba(29, 32, 28, 0.7);
+}
+.clear{
+    height: 50px;
+  width: 100px;
+  border-radius: 20px;
+  font-size: large;
+  font-weight: bold;
+  background-color: #5E6C54;                 /* Dune grass green */
+  border: 1px solid rgba(255, 255, 255, 0.15);/* Muted top edge highlight */
+  color: #FFFFFF;
+}
+.clear:hover{
+    background-color: rgba(29, 32, 28, 0.7);
+}
+.weather_deatils{
+    width:90%;
+    max-width:400px;
+    margin-top:40px;
+
+    border:2px solid rgba(255,255,255,.08);
+    background:rgba(29,32,28,.55);
+    box-shadow:0 20px 50px rgba(0,0,0,.2);
+    color:white;
+    border-radius:20px;
+}
+.card_outer{
+     display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin:20px;
+}
+.card{
+     flex:1 1 120px;
+    max-width:150px;
+    min-width:120px;
+
+    height:100px;
+    border-radius:20px;
+    text-align:center;
+    padding-top:20px;
+    font-weight:bold;
+    border:2px solid #5E6C54;
+    transition:.3s;
+}
+.card:hover {
+    background-color: rgba(255, 255, 255, 0.08); /* Fills glass effect slightly */
+    border-color: rgba(255, 255, 255, 0.4);      /* Brightens the border */
+    transform: translateY(-4px);                  /* Lifts the card up slightly */
+    cursor: pointer;                              /* Changes cursor to a hand pointer */
+}
+@media (max-width: 600px){
+
+    h1{
+        font-size:30px;
+    }
+
+    .weather_input{
+        flex-direction:column;
+    }
+
+    .city{
+        width:95%;
+    }
+
+    .btn,
+    .clear{
+        width:95%;
+    }
+
+    .weather_deatils{
+        width:95%;
+    }
+
+    .card{
+        min-width:140px;
+    }
+
+}
